@@ -1,0 +1,107 @@
+@import "../../style.scss";
+
+.rightbar {
+  @include themify($themes) {
+    display: flex;
+    justify-content: center;
+    flex: 3;
+    height: calc(100vh - 70px);
+    position: sticky;
+    top: 70px;
+    overflow-y: scroll;
+    background-color: themed("bgSoft");
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .container {
+      padding: 20px;
+
+      .item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 1rem;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        padding: 1rem;
+        background-color: themed("bg");
+
+        span {
+          color: gray;
+        }
+
+        .user {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+          gap: 1rem;
+
+          .userInfo {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            width: 100%;
+            position: relative;
+
+            .user-wrapper {
+              display: flex;
+              align-items: center;
+              gap: 1rem;
+            }
+
+            img {
+              width: 30px;
+              height: 30px;
+              border-radius: 50%;
+              object-fit: cover;
+            }
+            .online {
+              width: 10px;
+              height: 10px;
+              border-radius: 50%;
+              background-color: limegreen;
+              position: absolute;
+              top: 0;
+              left: 30px;
+            }
+
+            p {
+              color: themed("textColorSoft");
+              font-size: 12px;
+            }
+
+            span {
+              font-weight: 700;
+              color: themed("textColor");
+              font-size: 12px;
+              text-align: center;
+            }
+
+            .buttons {
+              display: flex;
+              align-items: center;
+              gap: 0.5rem;
+
+              button {
+                border: none;
+                padding: 5px;
+                color: #fff;
+                cursor: pointer;
+
+                &:first-child {
+                  background-color: rgb(39, 39, 151);
+                }
+                &:last-child {
+                  background-color: rgb(190, 44, 44);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

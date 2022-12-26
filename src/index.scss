@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Sintony:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-family: "Sintony", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.layout_right_left_bars {
+  display: flex;
+}
+
+.main_content {
+  flex: 6;
+}
