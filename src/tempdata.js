@@ -1,5 +1,3 @@
-import { useContext } from "react";
-
 export const stories = [
   {
     id: 1,
